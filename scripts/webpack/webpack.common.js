@@ -3,12 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  context: path.resolve(__dirname, '..'),
+  context: path.resolve(__dirname, '..', '..'),
   entry: './src/index.js',
   output: {
     path: path.resolve('dist'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: 'main.js',
   },
   module: {
     rules: [
@@ -18,9 +18,6 @@ module.exports = {
         use: ['babel-loader'],
       },
     ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new HtmlWebpackPlugin({

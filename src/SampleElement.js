@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SampleElement = ({ children }) => <p><strong>{children}</strong></p>;
+import styles from './SampleElement.sass';
+
+const SampleElement = ({ children }) => (
+  <p className={styles.wrapper}><strong>{children}</strong></p>
+);
 
 SampleElement.propTypes = {
   children: PropTypes.node,
